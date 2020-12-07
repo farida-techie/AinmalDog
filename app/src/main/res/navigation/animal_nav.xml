@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/animal_nav"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.malkinfo.animaldog.view.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/gotoDaitelFragment"
+            app:destination="@id/daitelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/daitelFragment"
+        android:name="com.malkinfo.animaldog.view.DaitelFragment"
+        android:label="fragment_daitel"
+        tools:layout="@layout/fragment_daitel" >
+        <action
+            android:id="@+id/gotoListFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+</navigation>
